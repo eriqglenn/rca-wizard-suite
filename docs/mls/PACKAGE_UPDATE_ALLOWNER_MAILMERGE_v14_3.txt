@@ -1,0 +1,45 @@
+PACKAGE UPDATE v14.3 - All-Owner Notification Letter fix (true mail merge)
+
+PROBLEM
+Generate All Notification Letters produced a correct first letter, but every
+later owner letter (a) used narrow margins for the BODY text (stretching it too
+wide) and (b) was MISSING the council-member footer. Preview One Letter was
+correct.
+
+ROOT CAUSE
+The owner-notification template stores the council-member line as a FIRST-PAGE
+footer (w:titlePg + footerReference type="first") attached to the template's
+first section (the narrow letterhead band), with the letter body in a second,
+normal-margin section. The earlier all-owner code (raw body copying, then later
+docxcompose) did not reproduce that section structure for owners 2..N:
+- docxcompose collapsed every appended letter to a SINGLE shared footer
+  reference, so 28 of 29 sections carried the titlePg flag but had NO footer to
+  point to -> blank footer on every letter after the first.
+- The letterhead-band -> body section break was also lost, so later letters'
+  body inherited the wrong section margins.
+Measured on the bad output: 30 sections, 29 with titlePg but only 1 with a
+footerReference.
+
+FIX (true mail merge, section-preserving)
+generate_letters now renders each owner from a fresh copy of the official
+template (identical to the Preview One Letter path) and appends each letter as
+its OWN complete section block, preserving that letter's sectPr blocks verbatim
+- including the first-page footer reference and the normal body margins. All
+letters in one case share the identical council-member footer, so they all
+correctly reference the single template footer part.
+
+Result on the sample case (28 owners): 56 sections, 28 with titlePg AND 28 with
+footerReference (balanced); every letter page shows the footer; body margins
+match Preview One Letter; clean Letter/Map alternation; no blank pages. Verified
+against the real City Owner_Notification_Letter_Template_Clean.docx, first /
+late / last owner all matching the preview.
+
+DEPENDENCIES
+No new dependencies. (An interim build briefly required docxcompose; that
+approach was replaced and the dependency removed. requirements.txt is back to
+python-docx, openpyxl, pypdf, Pillow, PyMuPDF, playwright.)
+
+NOTES
+get_template_body_elements, append_template_copy, _strip_section_properties,
+and _body_insert_before_sectpr are no longer used by letter generation; left in
+place pending a usage check by other modules.

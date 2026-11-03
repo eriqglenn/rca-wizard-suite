@@ -1,0 +1,22 @@
+MLS RCA Document Wizard v13.8.2 - Holistic check and HCAD hardening
+======================================================================
+
+Date: 2026-06-03
+
+This package supersedes v13.8.1.
+
+Checked:
+- rca_mailout_wizard.py compiles.
+- mailout_engine.py compiles.
+- hcad_downloader.py compiles.
+- HCAD button commands exist: Export Address List, Download HCAD Records, Open HCAD Folder.
+- MLS 926 calculation sheet loads with no warnings.
+- Step 2 auto-read values resolve to: Application 926, Banks Street, 1600 Banks Street, north and south sides, between Mandell Street and Dunlavy Street, 6250-Square Foot.
+- HCAD address export creates 28 addresses from Step 1.
+
+Fixes added after v13.8.1:
+- Step 2 now wins for auto-read case fields even if Case Info has a stale formula cache or an Excel formula error such as #NAME?.
+- HCAD downloader completion now updates Tkinter variables on the main UI thread instead of inside the worker thread.
+
+Known external limitation:
+- HCAD may require visible-browser verification/CAPTCHA. Complete the verification in Chrome when prompted.

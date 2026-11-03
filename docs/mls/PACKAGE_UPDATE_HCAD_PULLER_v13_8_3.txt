@@ -1,0 +1,28 @@
+MLS RCA Document Wizard v13.8.3 - HCAD Puller Reliability Update
+================================================================
+
+This package updates the HCAD downloader integration holistically.
+
+Changes:
+- Uses a persistent Chrome profile stored in the case HCAD_Records folder.
+  This helps preserve HCAD verification/cookies after the planner completes
+  the human-verification step in the visible Chrome window.
+- Adds a verify-first workflow. The downloader opens HCAD and waits for the
+  HCAD search page before starting the batch. If HCAD asks for verification,
+  the planner completes it in Chrome and the batch continues.
+- Slows batch processing with an 8-15 second pause between records.
+- Adds resume/skip behavior. Existing PDFs are skipped rather than re-downloaded.
+- Creates HCAD_Download_Report.csv in the HCAD_Records folder with Address,
+  Account, Status, PDF File, Notes, and Downloaded At columns.
+- Exports TAX_ID/account numbers from Step 1 with the site address when available.
+  The downloader attempts account search first and falls back to address search
+  when an account search has no result.
+- Keeps HCAD PDFs in the case output folder under HCAD_Records/ and auto-selects
+  those PDFs for the RCA packet builder after the batch finishes.
+
+Important:
+- This does not bypass HCAD human verification. It keeps the browser visible and
+  waits for the planner to complete verification when HCAD requests it.
+- If HCAD continues to block or challenge repeatedly, use the Download Report to
+  identify which records failed or need manual review, then rerun the downloader;
+  completed PDFs will be skipped.

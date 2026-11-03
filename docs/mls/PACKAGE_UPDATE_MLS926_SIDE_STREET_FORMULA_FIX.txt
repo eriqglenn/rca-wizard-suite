@@ -1,0 +1,13 @@
+MLS 926 calculation sheet side-of-street formula fix
+
+Updated: 2026-06-03
+
+This package replaces the MLS 926 sample calculation workbook with:
+  sample_input/NEW_MLS_926_Calculation_Sheet_Case_Info_v12_SIDE_STREET_LEGACY_FORMULA_FIXED.xlsx
+
+Fix included:
+- Case Info!B46 no longer uses TEXTJOIN, which caused #NAME? in some Excel installs.
+- Case Info!B46 now uses a legacy-compatible IF/AND formula to pull Step 2 B6 and D6 and return clean text such as:
+  north and south sides
+
+The formula keeps Case Info as an auto-read/review field while preserving Step 2 as the source of truth.

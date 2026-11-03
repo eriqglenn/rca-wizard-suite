@@ -1,0 +1,13 @@
+MLS Wizard Package Update - Calculation Sheet Writable Fix
+=========================================================
+
+This package was repacked so the included MLS 926 calculation workbook is not marked read-only by file permissions inside the ZIP package.
+
+Current calculation workbook included:
+
+sample_input/NEW_MLS_926_Calculation_Sheet_Case_Info_v11_STEP2_TO_CASEINFO_FIXED_PAGE2_UNCHANGED.xlsx
+
+Notes:
+- The workbook itself has no workbook/sheet protection applied.
+- The file permission in the package is set to writable.
+- If Windows/Excel still opens it in Protected View because it was downloaded from the internet, click Enable Editing or right-click the ZIP/file > Properties > Unblock before extracting/opening.

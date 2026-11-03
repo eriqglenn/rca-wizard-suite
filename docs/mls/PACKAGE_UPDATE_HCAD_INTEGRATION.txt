@@ -1,0 +1,26 @@
+MLS Wizard v13.7 HCAD Finder Integration
+=======================================
+
+This package adds a Phase 1 HCAD Records module to the regular MLS RCA Document Wizard.
+
+What changed:
+- Added hcad_downloader.py to the wizard package.
+- Added Step 1 address export logic using Step 1 - Input Properties Info / Site_addr_1.
+- Added Select Files page buttons:
+  - Export Address List
+  - Download HCAD Records
+  - Open HCAD Folder
+- HCAD address lists now save to Output Folder/HCAD_Records/MLS_<ApplicationNo>_HCAD_Address_List.txt.
+- HCAD PDFs downloaded by the helper save to Output Folder/HCAD_Records.
+- The wizard automatically selects PDFs found in Output Folder/HCAD_Records after the downloader finishes.
+
+Planner workflow:
+1. Select the calculation workbook and output folder.
+2. Click Export Address List to review the addresses, or click Download HCAD Records directly.
+3. If HCAD asks for verification, complete it in the Chrome window.
+4. After the download finishes, build the RCA packet. The downloaded PDFs will be used as the HCAD Records attachment list.
+
+Notes:
+- The HCAD downloader uses visible Chrome because HCAD may require human verification.
+- It does not attempt to bypass CAPTCHA/verification.
+- Filenames now include the full address instead of only the street number, for example HCAD_1601_BANKS_ST.pdf.

@@ -1,0 +1,14 @@
+MLS RCA Document Wizard v13.8.1 - HCAD Startup Fix
+=================================================
+
+Fix included:
+- Added the missing UI callback methods referenced by the HCAD Records buttons:
+  - _export_hcad_list
+  - _download_hcad_records
+  - _open_hcad_folder
+- Updated the window title to v13.8.1.
+- The HCAD buttons now export Step 1 addresses, run the bundled HCAD downloader, save PDFs to the case output folder under HCAD_Records, and auto-select downloaded PDFs for the packet builder.
+
+Reason for fix:
+The prior v13.8 package added the HCAD buttons to the Select Files page but did not include the callback methods in rca_mailout_wizard.py. That caused the startup crash:
+AttributeError: '_tkinter.tkapp' object has no attribute '_export_hcad_list'

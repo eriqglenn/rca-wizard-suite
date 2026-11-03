@@ -1,0 +1,23 @@
+MLS RCA Document Wizard v14.0 - Single-Button HCAD Workflow
+============================================================
+
+This package updates the HCAD Records workflow based on planner testing.
+
+What changed:
+- Replaced the multi-button HCAD workflow with one main button: Download HCAD Records.
+- The wizard now reads Step 1 addresses/TAX_ID values automatically after the workbook is loaded.
+- The wizard explicitly opens Google Chrome instead of using the default browser, so it should not open Microsoft Edge when HCAD verification is needed.
+- The planner completes HCAD human verification in Chrome, returns to the wizard, and clicks OK to continue.
+- The wizard then connects to the Chrome session, downloads HCAD records, saves PDFs into the case HCAD_Records folder, creates HCAD_Download_Report.csv, and selects found PDFs for the RCA packet.
+- The Open HCAD Folder button remains as a practical fallback/review tool.
+
+What stayed:
+- Step 2-to-Case Info auto-read logic remains intact.
+- Step 1 address/TAX_ID export logic remains intact, but it is now behind the one-button workflow.
+- HCAD_Records folder organization remains intact.
+- HCAD_Download_Report.csv remains intact.
+- Resume/skip existing PDFs remains handled by the bundled downloader.
+- RCA packet integration still uses the selected HCAD PDFs.
+
+Important note:
+HCAD/Cloudflare human verification is not bypassed. The workflow is designed to use a real visible Chrome window and let the planner complete verification normally.

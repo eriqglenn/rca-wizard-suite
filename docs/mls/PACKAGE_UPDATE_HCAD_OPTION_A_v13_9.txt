@@ -1,0 +1,70 @@
+MLS RCA Document Wizard v13.9 - HCAD Option A Chrome Connection Update
+=====================================================================
+
+Purpose
+-------
+This update replaces the previous HCAD workflow that launched a Playwright-owned
+browser. HCAD/Cloudflare repeatedly challenged that browser and could block the
+batch even after human verification.
+
+What changed
+------------
+The HCAD section now supports an Option A workflow:
+
+1. Export Address List
+   - Pulls HCAD search records from Step 1.
+   - Exports address + TAX_ID values into the case output folder under HCAD_Records.
+
+2. Open HCAD in Chrome
+   - Opens https://search.hcad.org/ in the user's normal default browser for
+     manual verification/manual fallback.
+
+3. Start Chrome Session
+   - Starts a normal Chrome window with remote debugging enabled on port 9222.
+   - This is a real Chrome browser, not a Playwright-owned persistent browser.
+   - The planner completes HCAD human verification in that Chrome window.
+
+4. Connect & Download
+   - Connects to the Chrome session on http://127.0.0.1:9222.
+   - Uses the already-verified Chrome session to run the batch search/download.
+   - Saves PDFs into HCAD_Records and writes HCAD_Download_Report.csv.
+
+5. Import Downloaded PDFs
+   - Scans HCAD_Records for PDFs and selects them for the RCA Packet Builder.
+   - This preserves the workflow even if HCAD blocks automation; the planner can
+     manually save PDFs into HCAD_Records and import them.
+
+What stayed
+-----------
+- Step 1 address/TAX_ID export remains.
+- HCAD_Records folder remains.
+- HCAD_Download_Report.csv remains.
+- Resume/skip existing PDFs remains.
+- RCA packet integration remains.
+- Manual HCAD record selection remains.
+
+What was removed from the active workflow
+-----------------------------------------
+- The wizard no longer depends on a Playwright-owned browser profile for HCAD.
+- The previous persistent automation profile is now only a legacy fallback in
+  hcad_downloader.py, not the wizard's primary button path.
+- The wizard no longer assumes it can bypass HCAD/Cloudflare verification.
+
+Planner workflow
+----------------
+1. Load the calculation workbook.
+2. Click Export Address List.
+3. Click Start Chrome Session.
+4. In the Chrome window, complete HCAD human verification and wait for the HCAD
+   property search page to load.
+5. Return to the wizard and click Connect & Download.
+6. If HCAD blocks automated searching anyway, manually save PDFs into the
+   HCAD_Records folder and click Import Downloaded PDFs.
+
+Notes
+-----
+A normal Chrome tab that is already open cannot be controlled unless Chrome was
+started with a remote debugging port. The Start Chrome Session button opens a
+normal Chrome window with that connection enabled. This is why both Open HCAD in
+Chrome and Start Chrome Session are available: Open HCAD in Chrome is useful for
+manual work/fallback; Start Chrome Session is needed for connected downloading.

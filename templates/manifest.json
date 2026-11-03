@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "updated": "2026-11-02 21:25",
+  "wizards": {
+    "mls": {
+      "name": "MLS Wizard",
+      "roles": [
+        {
+          "key": "template",
+          "label": "Owner notification letter",
+          "file": "MLS_Owner_Notification_Letter.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "protest_template",
+          "label": "Protest letter to owners (PC hearing)",
+          "file": "MLS_Protest_All_Owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "hearing_template",
+          "label": "Notice of public hearing (support under 51%)",
+          "file": "MLS_Notice_Public_Hearing_Less_51.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "applicant_template",
+          "label": "Applicant sign letter",
+          "file": "MLS_Applicant_Complete_Signs.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "director_template",
+          "label": "Director approval",
+          "file": "MLS_Director_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_template",
+          "label": "Planning Commission approval",
+          "file": "PC_Approval_NEW.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "routing_template",
+          "label": "MLS routing form",
+          "file": "MLS_Routing Form.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_template",
+          "label": "OneMeeting staff report (Director path)",
+          "file": "MLS_OneMeeting_Staff_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "ordinance_template",
+          "label": "Draft ordinance",
+          "file": "MLS_Ordinance_Template.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        }
+      ]
+    },
+    "mbl": {
+      "name": "MBL Wizard",
+      "roles": [
+        {
+          "key": "pc_speech_template",
+          "label": "Planning Commission speech",
+          "file": "MBL_PC_Speech.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_draft_template",
+          "label": "Planning Commission draft report",
+          "file": "MBL_PC_Draft_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "template",
+          "label": "Owner notification letter",
+          "file": "MBL_ALL_OWNERS.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "hearing_template",
+          "label": "Notice of public hearing (support under 51%)",
+          "file": "MBL_Notice_Public_Hearing_Less_51.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "protest_template",
+          "label": "Protest letter to owners (PC hearing)",
+          "file": "MBL_Protest_All_Owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "reschedule_template",
+          "label": "Notice of PC rescheduling",
+          "file": "MBL_Notice_PC_Rescheduling.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "applicant_template",
+          "label": "Applicant sign letter",
+          "file": "MBL_APPLICANT_COMPLETE_SIGNS.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "director_template",
+          "label": "Director approval",
+          "file": "MBL_Directors_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_template",
+          "label": "Planning Commission approval",
+          "file": "MBL_PC_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "routing_template",
+          "label": "MBL routing form",
+          "file": "MBL_Routing_Form.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_template",
+          "label": "OneMeeting staff report (Director path)",
+          "file": "MBL_OneMeeting_Staff_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_less51_template",
+          "label": "OneMeeting staff report (support under 51%)",
+          "file": "MBL_OneMeeting_Staff_Report_Less51.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_protest_template",
+          "label": "OneMeeting staff report (protest)",
+          "file": "MBL_OneMeeting_Staff_Report_Protest.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "ordinance_template",
+          "label": "MBL draft ordinance",
+          "file": "MBL_Ordinance_Template_Clean.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        }
+      ]
+    },
+    "mls_renewal": {
+      "name": "MLS Renewal Wizard",
+      "roles": [
+        {
+          "key": "pc_speech_template",
+          "label": "Planning Commission speech",
+          "file": "MLS_REN_PC_Speech.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_draft_template",
+          "label": "Planning Commission draft report",
+          "file": "MLS_REN_PC_Draft_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "sfr_template",
+          "label": "SFR renewal letter to owners",
+          "file": "MLS_Renewal_SFR_Letters_to_owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "no_sfr_template",
+          "label": "No-SFR renewal letter to owners",
+          "file": "MLS_Renewal_NO_SFR_Letters_to_owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "protest_template",
+          "label": "Protest letter to owners (PC hearing)",
+          "file": "MLS_REN_Protest_All_Owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "applicant_template",
+          "label": "Applicant sign letter",
+          "file": "MLS_Renewal_Applicant_Signs.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "director_template",
+          "label": "Director approval",
+          "file": "MLS_REN_Director_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_template",
+          "label": "Planning Commission approval",
+          "file": "MLS_REN_PC_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "routing_template",
+          "label": "Renewal routing form",
+          "file": "MLS_Renewal_Routing_Form.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_director_template",
+          "label": "OneMeeting staff report (Director path)",
+          "file": "MLS_REN_OneMeeting_Director_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_pc_template",
+          "label": "OneMeeting staff report (PC path)",
+          "file": "MLS_REN_OneMeeting_PC_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "ordinance_template",
+          "label": "Draft renewal ordinance",
+          "file": "MLS_RENEWAL_Ordinance_Template.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        }
+      ]
+    },
+    "mbl_renewal": {
+      "name": "MBL Renewal Wizard",
+      "roles": [
+        {
+          "key": "pc_speech_template",
+          "label": "Planning Commission speech",
+          "file": "MBL_REN_PC_Speech.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_draft_template",
+          "label": "Planning Commission draft report",
+          "file": "MBL_REN_PC_Draft_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "owner_template",
+          "label": "Owner renewal letter",
+          "file": "MBL_REN_ALL_OWNERS.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "protest_template",
+          "label": "Protest letter to owners (PC hearing)",
+          "file": "MBL_REN_Protest_All_Owners.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "reschedule_template",
+          "label": "Notice of PC rescheduling",
+          "file": "MBL_REN_Notice_PC_Rescheduling.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "acceptance_template",
+          "label": "Application acceptance letter",
+          "file": "MBL_REN_Application_Acceptance.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "applicant_template",
+          "label": "Applicant sign letter",
+          "file": "MBL_REN_APPLICANT_COMPLETE_SIGNS.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "director_template",
+          "label": "Director approval",
+          "file": "MBL_REN_Directors_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "pc_template",
+          "label": "Planning Commission approval",
+          "file": "MBL_REN_PC_Approval.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "routing_template",
+          "label": "Renewal routing form",
+          "file": "MBL_REN_Routing_Form.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "staff_report_template",
+          "label": "OneMeeting staff report (Director path)",
+          "file": "MBL_REN_OneMeeting_Staff_Report.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        },
+        {
+          "key": "ordinance_template",
+          "label": "Draft renewal ordinance",
+          "file": "MBL_REN_Ordinance_Template.docx",
+          "fill": "wording",
+          "expected_tokens": [],
+          "updated": null,
+          "history": []
+        }
+      ]
+    }
+  }
+}

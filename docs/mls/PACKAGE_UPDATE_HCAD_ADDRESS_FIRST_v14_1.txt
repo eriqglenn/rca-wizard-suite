@@ -1,0 +1,11 @@
+MLS RCA Document Wizard v14.1 — HCAD Address-First Search Update
+
+Change made:
+- HCAD downloader now searches by property address first.
+- A cleaned 13-digit HCAD account number is used only as a fallback if address search fails.
+- 12-digit account values from Excel are padded with a leading zero before fallback search because Excel may drop leading zeroes.
+- Invalid account numbers are skipped instead of being used for the first search.
+- HCAD_Download_Report.csv now records whether a record was downloaded by address search or by 13-digit account fallback.
+
+Reason:
+In MLS 926 testing, HCAD account number search failed when the workbook showed an incomplete account number, while property address search succeeded. Address-first is the more reliable default for this wizard.

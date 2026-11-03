@@ -1,0 +1,13 @@
+MLS Wizard v13.7 package update
+
+Updated on 2026-06-03.
+
+Changes made:
+- Removed older calculation workbook samples from sample_input/ and sample_output/.
+- Added the latest MLS 926 calculation sheet:
+  sample_input/NEW_MLS_926_Calculation_Sheet_Case_Info_v11_STEP2_TO_CASEINFO_FIXED_PAGE2_UNCHANGED.xlsx
+
+Notes on the included MLS 926 calculation sheet:
+- Step 1 BB:BD formula fill-down fix included.
+- Case Info / Step 3 B42:B48 auto-populates from Step 2.
+- Step 2/Page 2 was preserved as the source of truth.

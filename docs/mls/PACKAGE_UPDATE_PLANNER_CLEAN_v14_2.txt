@@ -1,0 +1,20 @@
+MLS RCA Document Wizard v14.2 - Planner Clean Package
+
+Package layout changed for planner usability.
+
+Root folder now contains only:
+- Run Wizard.bat
+- MLS_Wizard_Files/
+
+All application files, templates, docs, sample inputs, and support files are inside MLS_Wizard_Files.
+The planner should normally only double-click Run Wizard.bat.
+
+The Run Wizard.bat file now:
+- changes into the MLS_Wizard_Files folder automatically
+- installs requirements on first run
+- launches rca_mailout_wizard.py
+
+HCAD workflow remains v14.1 address-first:
+- Download HCAD Records uses property address first
+- 13-digit HCAD account number is only used as fallback
+- downloaded PDFs are saved into HCAD_Records and added to the RCA packet builder

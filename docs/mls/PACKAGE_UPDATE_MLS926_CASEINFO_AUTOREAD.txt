@@ -1,0 +1,21 @@
+MLS 926 Case Info Auto-Read Update
+==================================
+
+This package updates the regular MLS RCA Document Wizard v13.7 so Case Info auto-read fields are populated from Step 2 even when Excel has not recalculated formula caches.
+
+Updated behavior:
+- Application_Number comes directly from Step 2 B2.
+- Application_Type comes directly from Step 2 A1 and is normalized for document language.
+- Street_Name comes directly from Step 2 B4.
+- Block_Description comes directly from Step 2 D4.
+- Side_Of_Street comes directly from Step 2 B6 and D6, formatted as "north and south sides" when both sides are present.
+- Cross_Streets comes directly from Step 2 B5 and D5, formatted as "between [Street A] and [Street B]".
+- Proposed_Min_Lot_Size / Minimum_Lot_Size comes directly from Step 2 E4.
+
+Reason for fix:
+The Case Info tab contains formulas in B42:B48, but Python/openpyxl can read blank or stale cached formula results if the workbook has not been opened/recalculated in desktop Excel. The wizard now reads Step 2 directly for those auto-read fields and uses those Step 2 values as the source of truth.
+
+Included calculation workbook:
+sample_input/NEW_MLS_926_Calculation_Sheet_Case_Info_v11_STEP2_TO_CASEINFO_FIXED_PAGE2_UNCHANGED.xlsx
+
+Step 2 was not changed.
